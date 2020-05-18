@@ -134,7 +134,7 @@ describe 'prometheus::daemon' do
                 )
               }
             end
-          elsif ['centos-7-x86_64', 'centos-8-x86_64', 'debian-8-x86_64', 'debian-9-x86_64', 'redhat-7-x86_64', 'redhat-8-x86_64', 'ubuntu-16.04-x86_64', 'ubuntu-18.04-x86_64', 'archlinux-5-x86_64'].include?(os)
+          elsif ['centos-7-x86_64', 'centos-8-x86_64', 'debian-8-x86_64', 'debian-9-x86_64', 'debian-10-x86_64', 'redhat-7-x86_64', 'redhat-8-x86_64', 'ubuntu-16.04-x86_64', 'ubuntu-18.04-x86_64', 'archlinux-5-x86_64', 'virtuozzolinux-7-x86_64'].include?(os)
             # init_style = 'systemd'
 
             it { is_expected.to contain_class('systemd') }
@@ -240,7 +240,7 @@ describe 'prometheus::daemon' do
             subject { exported_resources }
 
             it {
-              is_expected.to contain_prometheus__scrape_job('localhost:1234').with(
+              is_expected.to contain_prometheus__scrape_job('smurf_exporter_localhost_1234').with(
                 'labels' => {
                   'alias' => 'localhost'
                 }
@@ -271,7 +271,7 @@ describe 'prometheus::daemon' do
           subject { exported_resources }
 
           it {
-            is_expected.to contain_prometheus__scrape_job('localhost:1234').with(
+            is_expected.to contain_prometheus__scrape_job('smurf_exporter_localhost_1234').with(
               'labels' => {
                 'instance' => 'smurf1'
               }

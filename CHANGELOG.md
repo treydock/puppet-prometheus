@@ -4,7 +4,50 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
-## [v8.2.1](https://github.com/voxpupuli/puppet-prometheus/tree/v8.2.1) (2020-01-25)
+## [v8.4.0](https://github.com/voxpupuli/puppet-prometheus/tree/v8.4.0) (2020-04-17)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-prometheus/compare/v8.3.0...v8.4.0)
+
+**Implemented enhancements:**
+
+- Use `--scrape_uri` instead of `-scrape_uri` for apache\_exporter versions 0.8.0 and greater [\#444](https://github.com/voxpupuli/puppet-prometheus/pull/444) ([krische](https://github.com/krische))
+- Support ppc64le [\#443](https://github.com/voxpupuli/puppet-prometheus/pull/443) ([treydock](https://github.com/treydock))
+- add achive\_bin\_path parameter defaulting to existing value [\#438](https://github.com/voxpupuli/puppet-prometheus/pull/438) ([robmbrooks](https://github.com/robmbrooks))
+- Add VZ 6/7 to metadata.json [\#436](https://github.com/voxpupuli/puppet-prometheus/pull/436) ([bastelfreak](https://github.com/bastelfreak))
+- have a $service\_name parameter for all prometheus-exporters [\#430](https://github.com/voxpupuli/puppet-prometheus/pull/430) ([unki](https://github.com/unki))
+
+**Fixed bugs:**
+
+- have node file definitions use underscore instead of column [\#435](https://github.com/voxpupuli/puppet-prometheus/pull/435) ([ndelic0](https://github.com/ndelic0))
+
+**Closed issues:**
+
+- Apache Exporter 0.8.0+ uses `--` as argument prefix [\#442](https://github.com/voxpupuli/puppet-prometheus/issues/442)
+
+**Merged pull requests:**
+
+- Use voxpupuli-acceptance [\#441](https://github.com/voxpupuli/puppet-prometheus/pull/441) ([ekohl](https://github.com/ekohl))
+
+## [v8.3.0](https://github.com/voxpupuli/puppet-prometheus/tree/v8.3.0) (2020-02-28)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-prometheus/compare/v8.2.1...v8.3.0)
+
+**Implemented enhancements:**
+
+- Add service\_name parameter to haproxy-exporter [\#428](https://github.com/voxpupuli/puppet-prometheus/pull/428) ([unki](https://github.com/unki))
+- Add parameter max\_open\_files to server class [\#425](https://github.com/voxpupuli/puppet-prometheus/pull/425) ([kubicgruenfeld](https://github.com/kubicgruenfeld))
+- Support reloading alertmanager rather than restarting [\#424](https://github.com/voxpupuli/puppet-prometheus/pull/424) ([treydock](https://github.com/treydock))
+
+**Fixed bugs:**
+
+- Fix duplicate command line options in SysV script [\#427](https://github.com/voxpupuli/puppet-prometheus/pull/427) ([lukebigum](https://github.com/lukebigum))
+- Add config mode to config\_dir creation [\#397](https://github.com/voxpupuli/puppet-prometheus/pull/397) ([jpc2350](https://github.com/jpc2350))
+
+**Merged pull requests:**
+
+- if $purge\_config\_dir=true, force-manage config\_dir [\#426](https://github.com/voxpupuli/puppet-prometheus/pull/426) ([unki](https://github.com/unki))
+
+## [v8.2.1](https://github.com/voxpupuli/puppet-prometheus/tree/v8.2.1) (2020-01-26)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-prometheus/compare/v8.2.0...v8.2.1)
 
@@ -171,7 +214,6 @@ These should not affect the functionality of the module.
 - Bad formed prometheus.service  [\#306](https://github.com/voxpupuli/puppet-prometheus/issues/306)
 - apache\_exporter unable to contact apache on Debian 7 [\#296](https://github.com/voxpupuli/puppet-prometheus/issues/296)
 - Unable to force arch for installing exporter [\#265](https://github.com/voxpupuli/puppet-prometheus/issues/265)
-- Configuration of prometheus::server fails when looking up configname [\#254](https://github.com/voxpupuli/puppet-prometheus/issues/254)
 - support statsd\_exporter \>= 0.5.0 [\#248](https://github.com/voxpupuli/puppet-prometheus/issues/248)
 - Service fails to start under systemd [\#244](https://github.com/voxpupuli/puppet-prometheus/issues/244)
 - Add support for exporting/collecting \*\_exporter configs [\#126](https://github.com/voxpupuli/puppet-prometheus/issues/126)

@@ -247,6 +247,12 @@ State ensured from prometheus service (default 'running')
 
 Default value: 'running'
 
+##### `service_name`
+
+Data type: `String`
+
+Name of the prometheus service (default 'prometheus')
+
 ##### `manage_service`
 
 Data type: `Boolean`
@@ -966,6 +972,14 @@ Data type: `Stdlib::Absolutepath`
 
 
 
+##### `reload_on_change`
+
+Data type: `Boolean`
+
+
+
+Default value: `false`
+
 ##### `manage_config`
 
 Data type: `Boolean`
@@ -1340,7 +1354,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -1375,6 +1389,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the beanstalkd exporter service (default 'beanstalkd_exporter')
 
 ##### `user`
 
@@ -1553,7 +1573,7 @@ Default value: 'installed'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -1800,7 +1820,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -2036,6 +2056,12 @@ State ensured for the service (default 'running')
 
 Default value: 'running'
 
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the collectd exporter service (default 'collectd_exporter')
+
 ##### `user`
 
 Data type: `String[1]`
@@ -2222,7 +2248,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -2257,6 +2283,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the consul exporter service (default 'consul_exporter')
 
 ##### `user`
 
@@ -2446,7 +2478,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -2501,6 +2533,12 @@ Data type: `Boolean`
 Since version 1.1.0, the elasticsearch exporter uses kingpin, thus
 this param to define how we call the es.uri and es.timeout in the $options
 https://github.com/justwatchcom/elasticsearch_exporter/blob/v1.1.0/CHANGELOG.md
+
+##### `service_name`
+
+Data type: `String[1]`
+
+
 
 ##### `export_scrape_job`
 
@@ -2646,7 +2684,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -2681,6 +2719,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the graphite exporter service (default 'graphite_exporter')
 
 ##### `user`
 
@@ -2852,7 +2896,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -2887,6 +2931,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the haproxy exporter service (default 'haproxy_exporter')
 
 ##### `user`
 
@@ -3071,7 +3121,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -3106,6 +3156,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the mesos exporter service (default 'mesos_exporter')
 
 ##### `user`
 
@@ -3277,7 +3333,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -3312,6 +3368,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the mongodb exporter service (default 'mongodb_exporter')
 
 ##### `user`
 
@@ -3544,7 +3606,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -3579,6 +3641,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the mysqld exporter service (default 'mysqld_exporter')
 
 ##### `user`
 
@@ -3750,7 +3818,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -3785,6 +3853,12 @@ Data type: `String`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the nginx-vts exporter service (default 'nginx-vts-exporter')
 
 ##### `user`
 
@@ -3977,7 +4051,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -4669,7 +4743,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -4704,6 +4778,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the process exporter service (default 'process-exporter')
 
 ##### `user`
 
@@ -5450,7 +5530,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -5485,6 +5565,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the rabbitmq exporter service (default 'rabbitmq_exporter')
 
 ##### `user`
 
@@ -5719,7 +5805,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -6051,6 +6137,14 @@ Data type: `Stdlib::Ensure::Service`
 
 Default value: $prometheus::service_ensure
 
+##### `service_name`
+
+Data type: `String[1]`
+
+
+
+Default value: $prometheus::service_name
+
 ##### `manage_service`
 
 Data type: `Boolean`
@@ -6170,6 +6264,14 @@ Data type: `Optional[Array[Hash[String[1], Any]]]`
 
 
 Default value: $prometheus::collect_scrape_jobs
+
+##### `max_open_files`
+
+Data type: `Optional[Integer]`
+
+
+
+Default value: $prometheus::max_open_files
 
 ##### `usershell`
 
@@ -6319,7 +6421,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -6354,6 +6456,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the snmp exporter service (default 'snmp_exporter')
 
 ##### `user`
 
@@ -6527,7 +6635,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -6562,6 +6670,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the statsd exporter service (default 'statsd_exporter')
 
 ##### `mappings`
 
@@ -6744,7 +6858,7 @@ If package, then use this for package ensure default 'latest'
 
 ##### `package_name`
 
-Data type: `String`
+Data type: `String[1]`
 
 The binary package name - not available yet
 
@@ -6779,6 +6893,12 @@ Data type: `Stdlib::Ensure::Service`
 State ensured for the service (default 'running')
 
 Default value: 'running'
+
+##### `service_name`
+
+Data type: `String[1]`
+
+Name of the varnish exporter service (default 'varnish_exporter')
 
 ##### `user`
 
@@ -7031,6 +7151,14 @@ Data type: `Optional[String[1]]`
 Custom command passed to the archive resource to extract the downloaded archive.
 
 Default value: $prometheus::extract_command
+
+##### `archive_bin_path`
+
+Data type: `Stdlib::Absolutepath`
+
+Path to the binary in the downloaded archive.
+
+Default value: "/opt/${name}-${version}.${os}-${arch}/${name}"
 
 ##### `init_style`
 
