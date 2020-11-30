@@ -186,6 +186,13 @@ define prometheus::daemon (
     }
     # service_provider returns redhat on CentOS using sysv, https://tickets.puppetlabs.com/browse/PUP-5296
     'sysv','redhat': {
+      /*file { "/var/log/${name}":
+        ensure => 'file',
+        owner   => $user,
+        group   => $group,
+        mode    => '0644',
+        notify  => $notify_service,
+      }*/
       file { "/etc/init.d/${name}":
         mode    => '0555',
         owner   => 'root',
